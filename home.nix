@@ -8,6 +8,9 @@
         # Browser
         pkgs.brave
 
+        # Utilities
+        pkgs.htop
+
         # Style Packages 
 		pkgs.neofetch
 
@@ -50,6 +53,7 @@
             init.defaultBranch = "main";
             core.editor = "nvim";
             pull.rebase = "false";
+            credential.helper = "store";
         };
     };
 }
