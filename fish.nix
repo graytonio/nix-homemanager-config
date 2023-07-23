@@ -9,6 +9,10 @@
 			la = "exa -a --color=always --group-directories-first --icons";
 			ll = "exa -l --color=always --group-directories-first --icons";
 
+            grep = "rg";
+
+            cat = "bat";
+
 			tarnow = "tar -acf";
 			untar = "tar -zxvf";
 

@@ -5,10 +5,13 @@
 
     nixpkgs.config.allowUnfree = true;
 	home.packages = [
-        # Browser
+        # Desktop Applications
         pkgs.brave
+        pkgs.discord
+        pkgs.spotify
 
         # Utilities
+        pkgs.ripgrep
         pkgs.htop
 
         # Style Packages 
@@ -17,6 +20,7 @@
         # FS Commands
         pkgs.tree
 		pkgs.exa
+        pkgs.bat
 		
         # DevOps like tools
         pkgs.kubectl

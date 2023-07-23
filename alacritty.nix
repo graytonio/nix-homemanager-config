@@ -6,7 +6,7 @@
                 program = "fish";
                 args = [
                     "-C" 
-                    "tmux"
+                    "tmux attach || tmux"
                 ];
             };
 
