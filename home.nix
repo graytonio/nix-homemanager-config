@@ -1,15 +1,8 @@
 { pkgs, cfg, ... }: {	
-	home.username = "graytonio";
-	home.homeDirectory = "/home/graytonio";
 	home.stateVersion = "23.05";
 
     nixpkgs.config.allowUnfree = true;
 	home.packages = [
-        # Desktop Applications
-        pkgs.brave
-        pkgs.discord
-        pkgs.spotify
-
         # Utilities
         pkgs.ripgrep
         pkgs.htop
@@ -23,21 +16,21 @@
         pkgs.bat
 		
         # DevOps like tools
+        pkgs.kubectx
         pkgs.kubectl
         pkgs.k9s
 
         # Programming tools
-        pkgs.arduino
+        #pkgs.arduino
         pkgs.cargo
         pkgs.rustc
         pkgs.go
         pkgs.nodejs_18
         pkgs.python311
-        pkgs.gcc
     ];
 
     imports = [
-        ./vscode.nix
+        ./platform.nix
         ./tmux.nix
         ./starship.nix
         ./fish.nix
@@ -52,7 +45,6 @@
     programs.git = {
         enable = true;
         userName = "Grayton Ward";
-        userEmail = "graytonio.ward@gmail.com";
         extraConfig = {
             init.defaultBranch = "main";
             core.editor = "nvim";

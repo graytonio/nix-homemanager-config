@@ -2,14 +2,6 @@
     programs.alacritty = {
         enable = true;
         settings = {
-            shell = {
-                program = "fish";
-                args = [
-                    "-C" 
-                    "tmux attach || tmux"
-                ];
-            };
-
             font = {
                 normal.family = "FiraCode Nerd Font";
                 bold.family = "FiraCode Nerd Font";
