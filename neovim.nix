@@ -103,6 +103,7 @@
                     lsp.setup()
                 '';
             }
+            #pkgs.vimPlugins.nvim-treesitter.withAllGrammars
             {
                 plugin = pkgs.vimPlugins.nvim-treesitter;
                 type = "lua";
