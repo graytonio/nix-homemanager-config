@@ -34,6 +34,8 @@
         pkgs.python311
         pkgs.python311Packages.pip
         pkgs.gcc
+        pkgs.pscale
+        pkgs.nodePackages.vercel
     
         # Fonts
         (pkgs.nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" "Hack" ]; })
