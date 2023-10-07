@@ -8,9 +8,9 @@
         # Desktop Applications
         pkgs.brave
         pkgs.discord
-        pkgs.spotify
 
         # Utilities
+        pkgs.spotify-tui
         pkgs.ripgrep
         pkgs.htop
 
@@ -33,6 +33,7 @@
         pkgs.go
         pkgs.nodejs_18
         pkgs.python311
+        pkgs.python311Packages.pip
         pkgs.gcc
     ];
 
@@ -48,6 +49,16 @@
   	programs.home-manager = {
 		enable = true;
 	};
+
+    services.spotifyd = {
+        enable = true;
+        settings = {
+            global = {
+                username = "graytonio";
+                password = "";
+            };
+        };
+    };
 
     programs.git = {
         enable = true;

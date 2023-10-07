@@ -18,5 +18,13 @@
 
 			kc = "kubectl";
 		};
+        functions = {
+            vimc = {
+                argumentNames = "path";
+                body = ''
+                    cd $path && vim .
+                '';
+            };
+        };
 	};
 }
