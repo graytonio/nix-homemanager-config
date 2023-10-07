@@ -6,6 +6,7 @@
         # Desktop Applications
         pkgs.brave
         pkgs.discord
+        pkgs.obs-studio
 
         # Utilities
         pkgs.spotify-tui
@@ -26,7 +27,6 @@
         pkgs.k9s
 
         # Programming tools
-        #pkgs.arduino
         pkgs.cargo
         pkgs.rustc
         pkgs.go
@@ -34,6 +34,9 @@
         pkgs.python311
         pkgs.python311Packages.pip
         pkgs.gcc
+    
+        # Fonts
+        (pkgs.nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" "Hack" ]; })
     ];
 
     imports = [
@@ -49,6 +52,7 @@
 		enable = true;
 	};
 
+    fonts.fontconfig.enable = true;
     services.spotifyd = {
         enable = true;
         settings = {
@@ -62,6 +66,7 @@
     programs.git = {
         enable = true;
         userName = "Grayton Ward";
+        userEmail = "graytonio.ward@gmail.com";
         extraConfig = {
             init.defaultBranch = "main";
             core.editor = "nvim";

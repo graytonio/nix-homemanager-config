@@ -7,7 +7,12 @@
                 bold.family = "FiraCode Nerd Font";
                 italic.family = "FiraCode Nerd Font";
                 bold_italic.family = "FiraCode Nerd Font";
-                size = 14.0;
+                size = 12.0;
+            };
+
+            shell = {
+                args = [ "-C" "tmux a || tmux" ];
+                program = "fish";
             };
 
             colors = {
