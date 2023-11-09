@@ -5,6 +5,8 @@
     home.packages = [
     ];
 
+    imports = [];
+
     programs.git = {
         userEmail = "graytonio.ward@gmail.com";
     };

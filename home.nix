@@ -2,12 +2,7 @@
 	home.stateVersion = "23.05";
 
     nixpkgs.config.allowUnfree = true;
-	home.packages = [
-        # Desktop Applications
-        pkgs.brave
-        pkgs.discord
-        pkgs.obs-studio
-
+	home.packages = [        
         # Utilities
         pkgs.spotify-tui
         pkgs.ripgrep
@@ -25,6 +20,10 @@
         pkgs.kubectx
         pkgs.kubectl
         pkgs.k9s
+        pkgs.kubernetes-helm
+        pkgs.ansible
+        pkgs.argocd
+        pkgs.argocd-autopilot
 
         # Programming tools
         pkgs.cargo
@@ -47,7 +46,6 @@
         ./starship.nix
         ./fish.nix
         ./neovim.nix
-        ./alacritty.nix
     ];
 
   	programs.home-manager = {
